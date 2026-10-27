@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "pqblocks-files"
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/PQBlocks/hybrid-file-encryption"
+authors:
+  - name: "The PQBlocks Authors"
+keywords:
+  - post-quantum
+  - ml-kem
+  - x25519
+  - hybrid
+  - file-encryption
+  - chacha20-poly1305
+  - kem
+abstract: "Hybrid post-quantum file encryption: ML-KEM-768 plus X25519 key encapsulation with chunked ChaCha20-Poly1305 in the pfsh v1 format."

@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pqblocks-files"
+version = "0.1.0"
+description = "Hybrid post-quantum file encryption: ML-KEM-768 plus X25519 key encapsulation with chunked ChaCha20-Poly1305 in the pfsh v1 format."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+authors = [{name = "The PQBlocks Authors"}]
+keywords = ["post-quantum", "ml-kem", "x25519", "hybrid", "file-encryption", "chacha20-poly1305", "kem"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security :: Cryptography",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = ["bech32>=1.2,<2", "cryptography>=42,<51"]
+
+[project.optional-dependencies]
+test = ["pytest", "hypothesis"]
+
+[project.scripts]
+pqblocks-files = "pqblocks_files.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/PQBlocks/hybrid-file-encryption"
+Documentation = "https://github.com/PQBlocks/hybrid-file-encryption#readme"
+Source = "https://github.com/PQBlocks/hybrid-file-encryption"
+Changelog = "https://github.com/PQBlocks/hybrid-file-encryption/blob/main/CHANGELOG.md"
+Issues = "https://github.com/PQBlocks/hybrid-file-encryption/issues"
+Security = "https://github.com/PQBlocks/hybrid-file-encryption/security/policy"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,487 @@
+{
+ "timestamp_utc": "20260920T213446Z",
+ "benchmark_config": {
+  "n_trials_per_size_default": 100,
+  "n_trials_overrides": {
+   "100MB": 10
+  },
+  "override_reason": "100MB decrypt dominates wall-clock budget (~22s/op); 10 trials preserves bootstrap-CI structure within session budget",
+  "bootstrap_resamples": 10000,
+  "confidence_level": 0.95,
+  "sizes": [
+   "1KB",
+   "10KB",
+   "1MB",
+   "100MB"
+  ]
+ },
+ "total_instances": 4,
+ "total_trials": 310,
+ "passed": 310,
+ "failed": 0,
+ "pass_rate": 100.0,
+ "sizes_tested": [
+  {
+   "label": "1KB",
+   "size_bytes": 1024,
+   "n_trials": 100,
+   "n_passed": 100,
+   "encrypt_seconds": {
+    "median": 0.125017,
+    "p99": 0.187424,
+    "mean": 0.13068206999999998,
+    "ci": [
+     0.123442,
+     0.127969
+    ],
+    "p99_ci": [
+     0.171919,
+     0.187424
+    ],
+    "mean_ci": [
+     0.1278476,
+     0.1337605
+    ]
+   },
+   "decrypt_seconds": {
+    "median": 0.16319450000000002,
+    "p99": 0.222437,
+    "mean": 0.16646619999999998,
+    "ci": [
+     0.159814,
+     0.16739300000000001
+    ],
+    "p99_ci": [
+     0.203554,
+     0.222437
+    ],
+    "mean_ci": [
+     0.1634338,
+     0.16974089
+    ]
+   },
+   "roundtrip_seconds": {
+    "median": 0.28955000000000003,
+    "p99": 0.38552200000000003,
+    "mean": 0.29714827,
+    "ci": [
+     0.284486,
+     0.294159
+    ],
+    "p99_ci": [
+     0.365765,
+     0.38552200000000003
+    ],
+    "mean_ci": [
+     0.29177112,
+     0.30288957
+    ]
+   },
+   "throughput_mb_per_s": {
+    "median": 0.0034,
+    "p99": 0.0037,
+    "mean": 0.003316,
+    "ci": [
+     0.0033,
+     0.0034
+    ],
+    "p99_ci": [
+     0.0037,
+     0.0037
+    ],
+    "mean_ci": [
+     0.0032600000000000003,
+     0.00337
+    ]
+   },
+   "encrypt_throughput_mb_per_s": {
+    "median": 0.0078,
+    "p99": 0.0086,
+    "mean": 0.0075580000000000005,
+    "ci": [
+     0.0076,
+     0.0079
+    ],
+    "p99_ci": [
+     0.0085,
+     0.0086
+    ],
+    "mean_ci": [
+     0.00741,
+     0.007701
+    ]
+   },
+   "decrypt_throughput_mb_per_s": {
+    "median": 0.006,
+    "p99": 0.0068,
+    "mean": 0.005911,
+    "ci": [
+     0.0058,
+     0.0061
+    ],
+    "p99_ci": [
+     0.0067,
+     0.0068
+    ],
+    "mean_ci": [
+     0.005806,
+     0.006011
+    ]
+   },
+   "warmup_excluded": 0,
+   "frequency_scaling_pinned": true,
+   "concurrent_load": "none",
+   "n_trials_exception": null
+  },
+  {
+   "label": "10KB",
+   "size_bytes": 10240,
+   "n_trials": 100,
+   "n_passed": 100,
+   "encrypt_seconds": {
+    "median": 0.12425749999999999,
+    "p99": 0.188192,
+    "mean": 0.12934986,
+    "ci": [
+     0.122456,
+     0.128209
+    ],
+    "p99_ci": [
+     0.172981,
+     0.188192
+    ],
+    "mean_ci": [
+     0.12664422,
+     0.13228251
+    ]
+   },
+   "decrypt_seconds": {
+    "median": 0.1612785,
+    "p99": 0.216193,
+    "mean": 0.16621228999999998,
+    "ci": [
+     0.15911,
+     0.165866
+    ],
+    "p99_ci": [
+     0.196939,
+     0.216193
+    ],
+    "mean_ci": [
+     0.16337527000000002,
+     0.16925161
+    ]
+   },
+   "roundtrip_seconds": {
+    "median": 0.2884345,
+    "p99": 0.386702,
+    "mean": 0.29556214999999997,
+    "ci": [
+     0.281777,
+     0.29162849999999996
+    ],
+    "p99_ci": [
+     0.361643,
+     0.386702
+    ],
+    "mean_ci": [
+     0.29056342,
+     0.30101448000000003
+    ]
+   },
+   "throughput_mb_per_s": {
+    "median": 0.03385,
+    "p99": 0.0367,
+    "mean": 0.033284,
+    "ci": [
+     0.0335,
+     0.0347
+    ],
+    "p99_ci": [
+     0.0365,
+     0.0367
+    ],
+    "mean_ci": [
+     0.032736999999999995,
+     0.033797
+    ]
+   },
+   "encrypt_throughput_mb_per_s": {
+    "median": 0.0786,
+    "p99": 0.0881,
+    "mean": 0.076284,
+    "ci": [
+     0.0762,
+     0.0797
+    ],
+    "p99_ci": [
+     0.0842,
+     0.0881
+    ],
+    "mean_ci": [
+     0.07481399999999999,
+     0.077649
+    ]
+   },
+   "decrypt_throughput_mb_per_s": {
+    "median": 0.06055,
+    "p99": 0.0679,
+    "mean": 0.059187000000000003,
+    "ci": [
+     0.0589,
+     0.0614
+    ],
+    "p99_ci": [
+     0.0656,
+     0.0679
+    ],
+    "mean_ci": [
+     0.058206,
+     0.060127
+    ]
+   },
+   "warmup_excluded": 0,
+   "frequency_scaling_pinned": true,
+   "concurrent_load": "none",
+   "n_trials_exception": null
+  },
+  {
+   "label": "1MB",
+   "size_bytes": 1048576,
+   "n_trials": 100,
+   "n_passed": 100,
+   "encrypt_seconds": {
+    "median": 0.147839,
+    "p99": 0.237508,
+    "mean": 0.15116676,
+    "ci": [
+     0.143748,
+     0.154445
+    ],
+    "p99_ci": [
+     0.192707,
+     0.237508
+    ],
+    "mean_ci": [
+     0.1471319,
+     0.15534017
+    ]
+   },
+   "decrypt_seconds": {
+    "median": 0.1885865,
+    "p99": 0.267599,
+    "mean": 0.18963760000000002,
+    "ci": [
+     0.1858525,
+     0.192048
+    ],
+    "p99_ci": [
+     0.233829,
+     0.267599
+    ],
+    "mean_ci": [
+     0.18569915,
+     0.19382066
+    ]
+   },
+   "roundtrip_seconds": {
+    "median": 0.341481,
+    "p99": 0.48172000000000004,
+    "mean": 0.34080436,
+    "ci": [
+     0.329831,
+     0.347809
+    ],
+    "p99_ci": [
+     0.42144000000000004,
+     0.48172000000000004
+    ],
+    "mean_ci": [
+     0.33343371,
+     0.34849625
+    ]
+   },
+   "throughput_mb_per_s": {
+    "median": 2.9284,
+    "p99": 3.5515,
+    "mean": 2.971357,
+    "ci": [
+     2.8751,
+     3.0319
+    ],
+    "p99_ci": [
+     3.5221,
+     3.5515
+    ],
+    "mean_ci": [
+     2.907162,
+     3.035342
+    ]
+   },
+   "encrypt_throughput_mb_per_s": {
+    "median": 6.76435,
+    "p99": 8.2623,
+    "mean": 6.73607,
+    "ci": [
+     6.4748,
+     6.9566
+    ],
+    "p99_ci": [
+     8.1197,
+     8.2623
+    ],
+    "mean_ci": [
+     6.568498,
+     6.904823
+    ]
+   },
+   "decrypt_throughput_mb_per_s": {
+    "median": 5.3026,
+    "p99": 6.4078,
+    "mean": 5.333874,
+    "ci": [
+     5.207,
+     5.380599999999999
+    ],
+    "p99_ci": [
+     6.3618,
+     6.4078
+    ],
+    "mean_ci": [
+     5.224177,
+     5.441481
+    ]
+   },
+   "warmup_excluded": 0,
+   "frequency_scaling_pinned": true,
+   "concurrent_load": "none",
+   "n_trials_exception": null
+  },
+  {
+   "label": "100MB",
+   "size_bytes": 104857600,
+   "n_trials": 10,
+   "n_passed": 10,
+   "encrypt_seconds": {
+    "median": 0.5903515,
+    "p99": 0.647325,
+    "mean": 0.5927432,
+    "ci": [
+     0.5602469999999999,
+     0.6309415
+    ],
+    "p99_ci": [
+     0.623651,
+     0.647325
+    ],
+    "mean_ci": [
+     0.5656364,
+     0.6176477
+    ]
+   },
+   "decrypt_seconds": {
+    "median": 22.893066,
+    "p99": 29.744648,
+    "mean": 23.4367594,
+    "ci": [
+     21.552153,
+     24.507458
+    ],
+    "p99_ci": [
+     23.482366,
+     29.744648
+    ],
+    "mean_ci": [
+     22.1048233,
+     25.123184000000002
+    ]
+   },
+   "roundtrip_seconds": {
+    "median": 23.414165,
+    "p99": 30.38288,
+    "mean": 24.0295026,
+    "ci": [
+     22.141076,
+     25.131109
+    ],
+    "p99_ci": [
+     24.073005,
+     30.38288
+    ],
+    "mean_ci": [
+     22.6914807,
+     25.7317656
+    ]
+   },
+   "throughput_mb_per_s": {
+    "median": 4.2712,
+    "p99": 4.6336,
+    "mean": 4.20154,
+    "ci": [
+     3.9791,
+     4.5165
+    ],
+    "p99_ci": [
+     4.4315,
+     4.6336
+    ],
+    "mean_ci": [
+     3.94385,
+     4.41733
+    ]
+   },
+   "encrypt_throughput_mb_per_s": {
+    "median": 169.39065,
+    "p99": 195.8377,
+    "mean": 169.60228,
+    "ci": [
+     158.51445,
+     178.96155
+    ],
+    "p99_ci": [
+     169.8015,
+     195.8377
+    ],
+    "mean_ci": [
+     162.28692,
+     177.99126
+    ]
+   },
+   "decrypt_throughput_mb_per_s": {
+    "median": 4.368449999999999,
+    "p99": 4.7621,
+    "mean": 4.3092500000000005,
+    "ci": [
+     4.0804,
+     4.6413
+    ],
+    "p99_ci": [
+     4.5505,
+     4.7621
+    ],
+    "mean_ci": [
+     4.04063,
+     4.5334200000000004
+    ]
+   },
+   "warmup_excluded": 0,
+   "frequency_scaling_pinned": true,
+   "concurrent_load": "none",
+   "n_trials_exception": 10
+  }
+ ],
+ "hardware_fingerprint": {
+  "timestamp_utc": "2026-09-20T21:28:48.135269+00:00",
+  "python": "3.14.7 (main, Aug 10 2026, 07:46:56) [GCC 16.1.1 20260728]",
+  "platform": "Linux-7.1.8-1-cachyos-x86_64-with-glibc2.44",
+  "processor": "x86_64",
+  "cpu_count": 8,
+  "mem_total_kb": 24464644,
+  "mem_total_gb": 23.33
+ },
+ "total_valid_cards": 4,
+ "total_instances_tested": 4,
+ "total_solvers_tested": 1,
+ "hardware": "Intel(R) Core(TM) i9-13900K CPU @ 3.00GHz",
+ "note": "Raw summary of the earlier command-line benchmark run (2026-09-20), taken before the security fixes described in CHANGELOG.md. Numbers are unchanged from the original file."
+}
