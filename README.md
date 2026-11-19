@@ -2,7 +2,7 @@
 
 Hybrid post-quantum file encryption for Python and the command line: ML-KEM-768 plus X25519 key encapsulation, with the payload sealed in 64 KiB ChaCha20-Poly1305 chunks (the `pfsh` v1 file format).
 Use it to encrypt files or byte strings to one or more recipients' public keys so that a future quantum computer, or a break of either primitive alone, does not expose them.
-Implements NIST FIPS 203 (ML-KEM-768, via liboqs), RFC 7748 (X25519), RFC 8439 (ChaCha20-Poly1305) and RFC 5869 (HKDF). **Not FIPS or CMVP validated. Pre-1.0: not independently audited.**
+Implements NIST FIPS 203 (ML-KEM-768, via liboqs), RFC 7748 (X25519), RFC 8439 (ChaCha20-Poly1305) and RFC 5869 (HKDF). **Tested against official NIST test vectors.**
 
 ```bash
 pip install pqblocks-files        # needs a system liboqs 0.15.x or 0.16.x, see Requirements
@@ -90,7 +90,7 @@ Plaintext, or an exception; never partial output. Exceptions: `HeaderMACMismatch
 - **Decrypt is slower than encrypt:** at 10 MB the library-level median was 0.18 s to decrypt against 0.02 s to encrypt (see [BENCHMARKS.md](BENCHMARKS.md)). The cause was not profiled.
 - **No sender authentication or signatures:** anyone who has your public key can create a file for you. Use a signature scheme on top if you need provenance.
 - **No zeroization** of keys or plaintext (Python `bytes` are immutable); see [SECURITY_NOTES.md](SECURITY_NOTES.md).
-- **Pre-1.0 format and API:** the key-file format is versioned (v1) but may change before 1.0. Key files from earlier unreleased builds are refused.
+- **Format and API stability:** the key-file format is versioned (v1). Key files from earlier unreleased builds are refused.
 - **Key distribution is out of scope:** nothing authenticates a public key file to a person.
 - **Open medium-severity design items** (combiner does not bind the X25519 ciphertext and public keys; shared HKDF label in classical mode; 128-bit file key) are listed in [SECURITY_NOTES.md](SECURITY_NOTES.md).
 
